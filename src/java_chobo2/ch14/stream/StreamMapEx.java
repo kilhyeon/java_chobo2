@@ -15,12 +15,12 @@ public class StreamMapEx {
 		
 		IntStream intStream = new Random().ints(1,46);
 		Stream<Integer> integerStream = intStream.boxed();
-		integerStream.limit(6).forEach(System.out::print);
+		integerStream.limit(6).forEach(System.out::println);
 		
-//		Stream<String> lottoStream = new Random().ints(1,46)
-//				distinct().limit(6).sorted()
-//				.mapToObj(i -> i + ","); // IntStream -> Stream<String>		
-//		lottoStream.forEach(System.out::print);
+		Stream<String> lottoStream = new Random().ints(1,46)
+				.distinct().limit(6).sorted()
+				.mapToObj(i -> i + ", "); // IntStream -> Stream<String>		
+		lottoStream.forEach(System.out::print);
 		
 		
 	}// end of main
